@@ -20,7 +20,7 @@
 
 |Nombre|Apellido|Grupo|Whatsapp|Github|
 |:-------|---------|:----------:|---------|:---------|
-|Gonzalo|Gonzalez|JIGS|2625415602|fdgsd|
+|Gonzalo|Gonzalez|JIGS|2625415602||
 |Jael Gisel|Simonovich|JIGS|2613431031|https://jaelsimonovich.github.io/TyHM_Modulo_1/|
 |Juan Ignacio|Ristagno|JIGS|2613649714|https://github.com/Juan-Ignacio-Ristagno/Modulo-1-TyHM1|
-|Sebastián|Egea|JIGS|2616416126|sdfgsdf|
+|Sebastián|Egea|JIGS|2616416126||
