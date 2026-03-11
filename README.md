@@ -17,3 +17,7 @@
 * Producción de textos html
 
 * 
+
+|Nombre|Apellido|Grupo|WhatsApp|
+|------------|:------------:|------------:|
+|Gonzalo|González|JIGS|2625415602|
