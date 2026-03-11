@@ -18,10 +18,6 @@
 
 * 
 
-|Nombre|Apellido|Grupo|WhatsApp|
-|------------|:------------:|------------:|-------------|
-|Gonzalo|González|JIGS|2625415602|
-
 |Nombre|Apellido|Grupo|Whatsapp|
 |-------:|---------|:----------:|---------|
 |Gonzalo|Gonzalez|JIGS|2625415602|
