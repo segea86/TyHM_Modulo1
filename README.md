@@ -17,10 +17,9 @@
 * Producción de textos html
 
 * 
-horizontal rule:
----
+
 |Nombre|Apellido|Grupo|WhatsApp|
-|------------|:------------:|------------:|
+|------------|:------------:|------------:|-------------|
 |Gonzalo|González|JIGS|2625415602|
 
 |Nombre|Apellido|Grupo|Whatsapp|
