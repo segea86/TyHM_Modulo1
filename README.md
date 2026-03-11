@@ -18,7 +18,7 @@
 
 * 
 
-|Nombre|Apellido|Grupo|Whatsapp|
+|Nombre|Apellido|Grupo|Whatsapp|Github|
 |:-------|---------|:----------:|---------|:---------|
 |Gonzalo|Gonzalez|JIGS|2625415602|fdgsd|
 |Jael Gisel|Simonovich|JIGS|2613431031|https://jaelsimonovich.github.io/TyHM_Modulo_1/|
