@@ -19,7 +19,7 @@
 * 
 
 |Nombre|Apellido|Grupo|Whatsapp|
-|-------:|---------|:----------:|---------|
+|:-------|---------|:----------:|---------|
 |Gonzalo|Gonzalez|JIGS|2625415602|
 |Jael Gisel|Simonovich|JIGS|2613431031|
 |Juan Ignacio|Ristagno|JIGS|2613649714|
