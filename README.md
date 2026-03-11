@@ -2,6 +2,9 @@
 
 ## Producción de Textos e Hipertextos
 
+![JIGSA](logo_jigs.svg)
+
+
 <hr>
 
 * Archivo Readme.md
