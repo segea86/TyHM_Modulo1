@@ -28,3 +28,5 @@
 |Juan Ignacio|Ristagno|JIGSA|2613649714|https://github.com/Juan-Ignacio-Ristagno/Modulo-1-TyHM1|
 |Sebastián|Egea|JIGSA|2616416126|https://segea86.github.io/TyHM_EGEA_Mod1/|
 |Marcia Anahi|Benegas|JIGSA|2614727485|https://github.com/marciabenegas/-TyM-Modulo1|
+
+$e^{i\pi} + 1 = 0$
