@@ -9,7 +9,7 @@
 
 * Archivo Readme.md
 
-* Trabajo con tablas e Imágenes
+* Trabajo con tablas e imágenes
 
 * Construcción de Landing Page
 
