@@ -19,7 +19,6 @@
 
 * Producción de textos html
 
-* 
 
 |Nombre|Apellido|Grupo|Whatsapp|Github|
 |:-------|---------|:----------:|---------|:---------|
