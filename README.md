@@ -9,7 +9,7 @@
 
 * Archivo Readme.md
 
-* Trabajo con tablas e imágenes
+* Trabajar con tablas e imágenes
 
 * Construcción de Landing Page
 
@@ -17,7 +17,7 @@
 
 * Uso de md en Google Docs
 
-* Producción de textos html
+* Producción de texto HTML
 
 
 |Nombre|Apellido|Grupo|Whatsapp|Github|
