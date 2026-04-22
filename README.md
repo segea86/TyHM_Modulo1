@@ -2,7 +2,7 @@
 
 ## Producción de Textos e Hipertextos
 
-![JIGSA](logo-JIGSA.jpg)
+![JIGSA](logo_JIGSA.jpg)
 
 
 <hr>
