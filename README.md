@@ -28,11 +28,12 @@
 
 $e^{i\pi} + 1 = 0$
 
+<hr>
 
 # Módulo 2 TyHM
 
 ## Lenguaje de programación R-Cran (paradigma de objetos)Carpeta
-<hr>
+
 
 
 |Nombre|Apellido|Whatsapp|Github|
@@ -43,10 +44,12 @@ $e^{i\pi} + 1 = 0$
 |Sebastián|Egea|2616416126|https://github.com/segea86/|
 |Marcia|Benegas|2614727485|https://github.com/marciabenegas/|
 
+<hr>
+
 # Módulo 3 TyHM
 
 ## Simulación por Eventos Discretos
-<hr>
+
 
 
 |Nombre|Apellido|Whatsapp|Github|
