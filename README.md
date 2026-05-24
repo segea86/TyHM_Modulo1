@@ -1,10 +1,8 @@
+![JIGSA](logo_jigsa.jpg)
+
 # Módulo 1 TyHM
 
 ## Producción de Textos e Hipertextos
-
-![JIGSA](logo_jigsa.jpg)
-
-
 <hr>
 
 * Archivo Readme.md
@@ -29,3 +27,33 @@
 |Marcia|Benegas|2614727485|https://github.com/marciabenegas/TyHM_Modulo_1|
 
 $e^{i\pi} + 1 = 0$
+
+
+# Módulo 2 TyHM
+
+## Lenguaje de programación R-Cran (paradigma de objetos)Carpeta
+
+
+
+|Nombre|Apellido|Whatsapp|Github|
+|:-------|---------|---------|:---------|
+|Gonzalo|Gonzalez|2625415602|https://github.com/gonzagonzalezgg-spec|
+|Jael Gisel|Simonovich|2613431031|https://github.com/jaelsimonovich/|
+|Juan Ignacio|Ristagno|2613649714|https://github.com/Juan-Ignacio-Ristagno/|
+|Sebastián|Egea|2616416126|https://github.com/segea86/|
+|Marcia|Benegas|2614727485|https://github.com/marciabenegas/|
+
+# Módulo 3 TyHM
+
+## Simulación por Eventos Discretos
+
+
+
+|Nombre|Apellido|Whatsapp|Github|
+|:-------|---------|---------|:---------|
+|Gonzalo|Gonzalez|2625415602|https://github.com/gonzagonzalezgg-spec|
+|Jael Gisel|Simonovich|2613431031|https://github.com/jaelsimonovich/|
+|Juan Ignacio|Ristagno|2613649714|https://github.com/Juan-Ignacio-Ristagno/|
+|Sebastián|Egea|2616416126|https://github.com/segea86/|
+|Marcia|Benegas|2614727485|https://github.com/marciabenegas/|
+
