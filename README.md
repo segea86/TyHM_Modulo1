@@ -60,3 +60,19 @@ $e^{i\pi} + 1 = 0$
 |Sebastián|Egea|2616416126|https://github.com/segea86/|
 |Marcia|Benegas|2614727485|https://github.com/marciabenegas/|
 
+<hr>
+# Módulo 4 TyHM
+
+## 
+
+
+
+|Nombre|Apellido|Whatsapp|Github|
+|:-------|---------|---------|:---------|
+|Gonzalo|Gonzalez|2625415602|https://github.com/gonzagonzalezgg-spec|
+|Jael Gisel|Simonovich|2613431031|https://github.com/jaelsimonovich/|
+|Juan Ignacio|Ristagno|2613649714|https://github.com/Juan-Ignacio-Ristagno/|
+|Sebastián|Egea|2616416126|https://github.com/segea86/|
+|Marcia|Benegas|2614727485|https://github.com/marciabenegas/|
+
+
