@@ -1,0 +1,430 @@
+
+---
+title: "Algoritmos"
+output:
+  pdf_document: default
+  html_document: default
+  word_document: default
+date: "2026-04-01"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+## Primeros comandos de R
+R es un lenguaje muy parecido a Mathlab y trabaja fundamentalmente con variables que en general pueden ser matrices.
+```{r}
+A=38
+A=40
+B=60
+C=B-A
+C
+```
+
+```{r cars}
+Y=40
+alpha<-30
+```
+
+## Uso de datasets o base de datos internos de R
+
+Usando el comando data en la consola obtenemos distintos datos ya cargadso en la base se datos R, estos datos estan dados en tablas de las cuales podemos elegir columnas especificas si escribimos signo $ despues del comando de información específico y elegimos la columna de datos.
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure}
+plot(pressure, main="Presión del gas ideal",ylab="hPa",xlab="K")
+```
+
+## Comando Plot
+
+Es un comando que permite graficar cualquier fuente de datos que le asignemos, con main ponemos el titulo, con ylab ponemos titulao al eje ordenadas y con xlab ponemos titulo al eje abscisas. En caso de dudas de como utiliar el comando podemos escribir **?plot** en la consola, lo cual abrira una ventana que epxlicara en detalle el comando.
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
+## funciones estadisticas
+```{r}
+z1<-rnorm(350,22,5)
+```
+
+```{r}
+plot(z1)
+w1<-length(z1)
+w1
+x1<-(500:849)
+x1
+plot(x1,z1)
+```
+
+```{r}
+hist(z1, main = "histograma de edades", breaks = 50)
+```
+
+```{r}
+density(z1,type="d")
+```
+
+```{r}
+plot(density(z1),type="s")
+```
+
+
+
+
+## Ejercicio 1 de Algoritmos
+
+Consigna: Las últimas tres cifras de mi DNI son 919
+Crear una variable que tenga ese número
+
+```{r}
+DNI=919
+```
+
+
+Consigna: crear un vector que tenga todos los números enteros desde el 1 al 919
+
+```{r}
+for(i in 1:5) print(1:i)
+```
+```{r}
+secuencia_dni<- (1:919)
+secuencia_dni
+```
+
+## Ejercicio 2
+
+Calcular la suma de todos los valores del vector Secuencia_dni
+
+```{r}
+Total<-0
+Valor_final<-length(secuencia_dni)
+for (i in 1:Valor_final)
+Total<-Total + i
+Total
+```
+
+## Ejercicio 3
+Repetir el ejercicio anterior en Python
+
+```{python}
+suma = 0
+
+for i in range(1,920):
+    suma+=i
+
+print(suma)
+
+```
+
+## Ejercicio 4
+
+¿Cuánto tarda en correr el código del ejercicio 2?
+
+```{r}
+Sys.time()
+(for(i in 1:100){})
+Sys.time
+```
+```{r}
+inicio<-Sys.time()
+Total<-0
+Valor_final<-1000000*length(secuencia_dni)
+for (i in 1:Valor_final){
+Total<-Total + i
+}
+final<-Sys.time()
+final-inicio
+```
+## Ejercicio 5
+Repetir el ejercicio anterior utilizando la cabeza de Gauss
+
+
+
+
+## Ejercicio 6 
+Generar una serie de Fibonacci
+
+```{r}
+n <- 32
+fib <- numeric(n) 
+fib[1] <- 0
+fib[2] <- 1
+
+for (i in 3:n) {
+  fib[i] <- fib[i-1] + fib[i-2]
+}
+
+print(fib)
+```
+
+## Ejercicio 7.1
+Suma de serie Fibonacci
+
+```{r}
+n <- 32
+
+
+fib <- numeric(n)
+fib[1] <- 0
+fib[2] <- 1
+
+# Variable para acumular la suma
+suma_fibonacci <- fib[1] + fib[2]
+
+for (i in 3:n) {
+  fib[i] <- fib[i-1] + fib[i-2]
+  suma_fibonacci <- suma_fibonacci + fib[i]
+}
+
+print(paste("La serie es:", paste(fib, collapse = ", ")))
+print(paste("La suma total es:", suma_fibonacci))
+```
+
+
+
+## Ejercicio 7.2
+
+Productoria de los últimos 3 números del DNI. Es factorial, lo más grande que aguanta es el 69 factorial, luego se traba el código.
+
+No lo podemos hacer porque se traba.
+
+## Ejercicio 8
+
+Definición matemática recurrente 
+¿Cuántas iteraciones se necesitan para generar un número de la serie mayor que 1.000.000?
+
+```{r}
+f0 <- 0
+f1 <- 1
+iteraciones <- 1
+
+while (f1 <= 1000000) {
+  temp <- f0 + f1
+  f0 <- f1
+  f1 <- temp
+  iteraciones <- iteraciones + 1
+}
+
+print(paste("Iteraciones necesarias para generar un número mayora a 1000000 es:", iteraciones +1))
+```
+
+## Ejercicio 9
+Ordenación de un vector por el método burbuja
+
+```{r}
+#Tomo una muestra de 10 números entre 1 y 25
+x<-sample(1:600,10)
+
+# Definimos una función BURBUJA que recibe un paquete de datos x para ordenar
+burbuja <- function(x) {
+  n <- length(x)
+  for(j in 1:(n-1)) {
+    for(i in 1:(n-j)) {
+      if(x[i] > x[i+1]) {
+        temp <- x[i]
+        x[i] <- x[i+1]
+        x[i+1] <- temp
+      }
+    }
+  }
+  return(x)
+}
+res<-burbuja(x)
+
+#Muestra obtenida
+x
+```
+```{r}
+# Muestra ordenada
+res
+```
+
+```{r}
+# Ordenación con el comando SORT de R-Cran
+sort(x)
+
+```
+
+```{r}
+# INSTALAMOS los paquetes
+# install.packages("microbenchmark")
+# install.packages("ggplot2")
+
+library(microbenchmark)
+library(ggplot2)
+
+# EJECUTAMOS EL BENCHMARK
+# Repetimos 10 veces cada uno para tener una muestra estadística
+comparativa <- microbenchmark(
+  Metodo_Burbuja = burbuja(x),
+  Sort_Nativo = sort(x),
+  times = 10
+)
+
+# Imprimir resumen en consola
+print(comparativa)
+
+# Gráfico de Violín para investigar el comportamiento del CPU
+autoplot(comparativa) +
+  labs(title = "Comparativa de Performance: Burbuja vs Sort",
+       subtitle = "La escala vertical es logarítmica debido a la diferencia abismal",
+       y = "Tiempo de respuesta",
+       x = "Algoritmo") +
+  theme_minimal()
+#El "violín" de la Burbuja estará muy por encima del de Sort. Esto confirma que la computadora realiza muchísimas más operaciones por segundo con el primer método.
+```
+
+## Ejercicion 10
+
+La penitencia de Newton. 
+Desarrollar dos algoritmos que hagan este trabajo, por ejemplo para sumar desde 1 hasta 1 ∗ 1010 y verificar cuál de los dos es más efciente.
+
+```{r}
+# Definimos el límite: 10^10 (diez mil millones)
+# Nota: Usamos opciones para evitar la notación científica y asegurar precisión
+options(scipen = 999)
+n <- 1e10 
+
+# --- ALGORITMO 1: Fuerza Bruta (Iterativo) ---
+# Advertencia: Para 10^10 este método tardará mucho en R.
+# Probaremos con un número más pequeño para el ejemplo iterativo (10^7)
+sumar_iterativo <- function(num) {
+  suma <- 0
+  for (i in 1:num) {
+    suma <- suma + i
+  }
+  return(suma)
+}
+
+# --- ALGORITMO 2: Fórmula Matemática (Constante) ---
+sumar_formula <- function(num) {
+  # Usamos la fórmula de Gauss: n * (n + 1) / 2
+  # En R, para números tan grandes, trabajamos con aritmética de precisión
+  return( (num * (num + 1)) / 2 )
+}
+
+# --- PRUEBA DE EFICIENCIA ---
+
+# Medir Algoritmo Matemático (Instantáneo incluso para 10^10)
+inicio_f <- Sys.time()
+resultado_f <- sumar_formula(n)
+fin_f <- Sys.time()
+
+cat("Resultado (Fórmula):", resultado_f, "\n")
+cat("Tiempo (Fórmula):", fin_f - inicio_f, "segundos\n\n")
+
+# Medir Algoritmo Iterativo (Solo con 10^7 para no bloquear la PC)
+n_pequeno <- 1e7
+inicio_i <- Sys.time()
+resultado_i <- sumar_iterativo(n_pequeno)
+fin_i <- Sys.time()
+
+cat("Resultado Iterativo (para 10^7):", resultado_i, "\n")
+cat("Tiempo Iterativo (para 10^7):", fin_i - inicio_i, "segundos\n")
+```
+
+## Ejercicio 11
+Medir la performance del método k-mean de agrupamiento. Realizar una inroducción teórica antes de medir con gráfico de violin.
+
+
+El Machine Learning (Aprendizaje Automático) es el subcampo de la Inteligencia Artificial que permite que las computadoras "aprendan" patrones a partir de datos, en lugar de seguir instrucciones rígidas programadas por un humano.
+
+Como mencionamos antes, no todos los aprendizajes son iguales. Los pilares del MAchine Learning se dividen principalmente en tres:
+
+Supervisado (Con guía)
+No Supervisado (Autodidacta):  K-means
+Por Refuerzo (Ensayo y error):  IAs que juegan ajedrez o conducen coches autónomos.
+
+```{r}
+---
+title: "Clase15_04"
+author: "Sebastián Egea"
+date: "r Sys.Date()"
+output: ioslides_presentation
+---
+## Kmeans
+
+- Aprendizaje supervisado
+- Aprendizaje no supervisado
+  - **Kmeans**
+
+## Instalación de los paquetes
+{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+
+install.packages("rattle")      # Para los datos
+install.packages("NbClust")     # Para determinar el número de clústeres
+install.packages("ggplot2")    # Para visualización
+install.packages("tictoc")     # Para medir el tiempo de ejecución
+install.packages("factoextra") # Para mejorar la visualización
+{r}
+# Carga de bibliotecas
+library(rattle)
+library(NbClust)
+library(ggplot2)
+library(tictoc)
+
+
+## Inicio del algoritmo
+ 
+- Cargar datos 
+{r, echo = TRUE}
+data(wine, package='rattle')
+
+# Eliminamos la primera columna (la categoría real) para entrenamiento
+"no supervisado"
+wine_data <- wine[-1]
+
+# Escalado de los datos (Indispensable para K-means)
+wine_scaled <- scale(wine_data)
+
+
+
+## Análisis para determinar K
+{r,echo=TRUE}
+
+# Para que sea reproducible
+set.seed(1234)
+nc <- NbClust(wine_scaled, min.nc=2, max.nc=15, method="kmeans")
+# Según la regla de la mayoría, el número óptimo es 3
+
+
+
+## Medimos el tiempo
+{r}
+tic("Ejecución K-means")
+fit.km <- kmeans(wine_scaled, centers=3, nstart=25)
+toc()
+
+## Ver los resultados
+{r}
+print(fit.km$size) # Cantidad de muestras por grupo
+
+## Comparación con las categorías originales del dataset
+{r, echo=TRUE}
+
+conf_matrix <- table(wine$Type, fit.km$cluster)
+print(conf_matrix)
+
+
+## Visualización estética
+
+{r,echo=FALSE}
+
+library(factoextra)
+
+fviz_cluster(fit.km, data = wine_scaled,
+             palette = c("#2E9FDF", "#00AFBB", "#E7B800"), # Colores modernos
+             geom = "point",
+             ellipse.type = "convex", # Dibuja una figura alrededor de los puntos
+             ggtheme = theme_minimal(),
+             main = "Agrupamiento K-means de Vinos Italianos")
