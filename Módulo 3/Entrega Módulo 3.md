@@ -1,5 +1,5 @@
 
-#Informe Simul8
+##Informe Simul8
 
 #Informe del Proyecto
 
