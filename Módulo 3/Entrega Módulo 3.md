@@ -1,3 +1,5 @@
-#Informe Simul8#
-#Informe del Proyecto#
-Referencias
+#Informe Simul8
+
+#Informe del Proyecto
+
+#Referencias
