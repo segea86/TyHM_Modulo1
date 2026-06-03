@@ -1,6 +1,6 @@
 
 # Informe Simul8 
 
-#Informe del Proyecto
+# Informe del Proyecto
 
-#Referencias
+# Referencias
