@@ -3,5 +3,6 @@
 
 ## Método KMEANS de agrupamiento
 
-https://10785599ed9e4ed69e48c0a31f467521.app.posit.cloud/file_show?path=%2Fcloud%2Fproject%2Fkmeans.html#1
+Nuestro grupo realizó el ejercicio de Método Kmeans de agrupamiento. En este caso utilizamos la clasificación de distintos tipos de vinos y los agrupo en 3 clusters. 
 
+https://rpubs.com/JaelGisel/1438345
