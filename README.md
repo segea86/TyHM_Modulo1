@@ -71,7 +71,7 @@ $e^{i\pi} + 1 = 0$
 |Nombre|Apellido|Whatsapp|Github|
 |:-------|---------|---------|:---------|
 |Gonzalo|Gonzalez|2625415602|https://github.com/gonzagonzalezgg-spec|
-|Jael Gisel|Simonovich|2613431031|https://github.com/jaelsimonovich/|
+|Jael Gisel|Simonovich|2613431031|https://github.com/jaelsimonovich/TyHM_Modulo_1/tree/main/Módulo%204|
 |Juan Ignacio|Ristagno|2613649714|https://github.com/Juan-Ignacio-Ristagno/|
 |Sebastián|Egea|2616416126|https://github.com/segea86/|
 |Marcia|Benegas|2614727485|https://github.com/marciabenegas/|
