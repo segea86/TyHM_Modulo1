@@ -3,8 +3,7 @@
 
 Se realiza informe con las indicaciones y herramientas básicas del Simulador de eventos discretos SIMUL 8
 
-[Ver informe PDF](Informe_SIMUL8_Jigsa.pdf)
-
+https://github.com/segea86/TyHM_Modulo1/blob/main/M%C3%B3dulo%203/Informe%20_SIMUL8_Jigsa.pdf
 
 # Informe del Proyecto
 
