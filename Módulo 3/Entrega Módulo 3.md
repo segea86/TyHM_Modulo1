@@ -3,7 +3,7 @@
 
 Se realiza informe con las indicaciones y herramientas básicas del Simulador de eventos discretos SIMUL 8
 
-[Ver informe PDF](./Informe SIMUL8 Jigsa.pdf)
+[Ver informe PDF](./Informe_SIMUL8_Jigsa.pdf)
 
 
 # Informe del Proyecto
