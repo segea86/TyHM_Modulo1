@@ -40,7 +40,7 @@ $e^{i\pi} + 1 = 0$
 |:-------|---------|---------|:---------|
 |Gonzalo|Gonzalez|2625415602|https://github.com/gonzagonzalezgg-spec|
 |Jael Gisel|Simonovich|2613431031|[https://github.com/jaelsimonovich/TyHM_Modulo_1/tree/main/Módulo%202|
-|Juan Ignacio|Ristagno|2613649714|https://github.com/Juan-Ignacio-Ristagno/|
+|Juan Ignacio|Ristagno|2613649714|https://github.com/Juan-Ignacio-Ristagno/TyHM-Modulo2|
 |Sebastián|Egea|2616416126|https://github.com/segea86/|
 |Marcia|Benegas|2614727485|https://github.com/marciabenegas/|
 
@@ -56,7 +56,7 @@ $e^{i\pi} + 1 = 0$
 |:-------|---------|---------|:---------|
 |Gonzalo|Gonzalez|2625415602|https://github.com/gonzagonzalezgg-spec|
 |Jael Gisel|Simonovich|2613431031|https://github.com/jaelsimonovich/TyHM_Modulo_1/tree/main/Módulo%203|
-|Juan Ignacio|Ristagno|2613649714|https://github.com/Juan-Ignacio-Ristagno/|
+|Juan Ignacio|Ristagno|2613649714|https://github.com/Juan-Ignacio-Ristagno/TyHM-Modulo3|
 |Sebastián|Egea|2616416126|https://github.com/segea86/|
 |Marcia|Benegas|2614727485|https://github.com/marciabenegas/|
 
@@ -72,7 +72,7 @@ $e^{i\pi} + 1 = 0$
 |:-------|---------|---------|:---------|
 |Gonzalo|Gonzalez|2625415602|https://github.com/gonzagonzalezgg-spec|
 |Jael Gisel|Simonovich|2613431031|https://github.com/jaelsimonovich/TyHM_Modulo_1/tree/main/Módulo%204|
-|Juan Ignacio|Ristagno|2613649714|https://github.com/Juan-Ignacio-Ristagno/|
+|Juan Ignacio|Ristagno|2613649714|https://github.com/Juan-Ignacio-Ristagno/TyHM-Modulo4|
 |Sebastián|Egea|2616416126|https://github.com/segea86/|
 |Marcia|Benegas|2614727485|https://github.com/marciabenegas/|
 
