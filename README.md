@@ -21,7 +21,7 @@
 |Nombre|Apellido|Whatsapp|Github|
 |:-------|---------|---------|:---------|
 |Gonzalo|Gonzalez|2625415602|https://github.com/gonzagonzalezgg-spec/Modulo_1/tree/main/Modulo%201|
-|Jael Gisel|Simonovich|2613431031|https://github.com/jaelsimonovich/TyHM_Modulo_1|
+|Jael Gisel|Simonovich|2613431031|https://github.com/jaelsimonovich/TyHM_Entrega/tree/main/M%C3%B3dulo%201|
 |Juan Ignacio|Ristagno|2613649714|https://github.com/Juan-Ignacio-Ristagno/TyHM-Modulo1|
 |Sebastián|Egea|2616416126|https://github.com/segea86/TyHM_EGEA_Mod1|
 |Marcia|Benegas|2614727485|https://github.com/marciabenegas/TyHM_Modulo_1/tree/main/Modulo%201|
