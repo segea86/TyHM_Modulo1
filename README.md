@@ -42,7 +42,7 @@ $e^{i\pi} + 1 = 0$
 |Jael Gisel|Simonovich|2613431031|[https://github.com/jaelsimonovich/TyHM_Modulo_1/tree/main/Módulo%202|
 |Juan Ignacio|Ristagno|2613649714|https://github.com/Juan-Ignacio-Ristagno/TyHM-Modulo2|
 |Sebastián|Egea|2616416126|https://github.com/segea86/|
-|Marcia|Benegas|2614727485|https://github.com/marciabenegas/|
+|Marcia|Benegas|2614727485|https://github.com/marciabenegas/TyHM_Modulo_1/tree/main/Modulo%202|
 
 <hr>
 
