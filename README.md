@@ -24,7 +24,7 @@
 |Jael Gisel|Simonovich|2613431031|https://github.com/jaelsimonovich/TyHM_Modulo_1|
 |Juan Ignacio|Ristagno|2613649714|https://github.com/Juan-Ignacio-Ristagno/TyHM-Modulo1|
 |Sebastián|Egea|2616416126|https://github.com/segea86/TyHM_EGEA_Mod1|
-|Marcia|Benegas|2614727485|https://github.com/marciabenegas/TyHM_Modulo_1|
+|Marcia|Benegas|2614727485|https://github.com/marciabenegas/TyHM_Modulo_1/tree/main/Modulo%201|
 
 $e^{i\pi} + 1 = 0$
 
