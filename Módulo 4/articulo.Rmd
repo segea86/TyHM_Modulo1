@@ -6,7 +6,7 @@ description: |
 author:
   - name: Egea, Sebastián 
   - name: Benegas, Marcia
-  - name: Ristagno, Ingacio
+  - name: Ristagno, Ignacio
   - name: Simonovich, Jael
   - name: Gonzalez, Gonzalo
   - name: Investigación en Salud Pública y Políticas Sanitarias
