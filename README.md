@@ -32,7 +32,7 @@ $e^{i\pi} + 1 = 0$
 
 # Módulo 2 TyHM
 
-## Lenguaje de programación R-Cran (paradigma de objetos)
+## Algoritmos
 
 
 
