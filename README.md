@@ -74,6 +74,6 @@ $e^{i\pi} + 1 = 0$
 |Jael Gisel|Simonovich|2613431031|https://github.com/jaelsimonovich/TyHM_Modulo_1/tree/main/Módulo%204|
 |Juan Ignacio|Ristagno|2613649714|https://github.com/Juan-Ignacio-Ristagno/TyHM-Modulo4|
 |Sebastián|Egea|2616416126|https://github.com/segea86/TyHM_EGEA_Mod1/tree/main/M%C3%B3dulo%204|
-|Marcia|Benegas|2614727485|https://github.com/marciabenegas/|
+|Marcia|Benegas|2614727485|https://github.com/marciabenegas/TyHM_Entregas/tree/main/M%C3%B3dulo%204|
 
 
