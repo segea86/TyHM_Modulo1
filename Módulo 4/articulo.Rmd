@@ -1,0 +1,312 @@
+---
+title: "Análisis Integrado de Vulnerabilidades en los Sistemas de Salud y Emergencias en la República Argentina (2020–2025)"
+description: |
+  Crisis pandémica, transición de paradigmas sanitarios y gobernanza internacional
+  en un contexto de policrisis global.
+author:
+  - name: Egea, Sebastián 
+  - name: Benegas, Marcia
+  - name: Ristagno, Ingacio
+  - name: Simonovich, Jael
+  - name: Gonzalez, Gonzalo
+  - name: Investigación en Salud Pública y Políticas Sanitarias
+  - name: Facultad de Ingeniería- Universidad Nacional de Cuyo
+  - url: https://github.com/segea86
+  
+date: "`r Sys.Date()`"
+output:
+  distill::distill_article:
+    toc: true
+    toc_depth: 3
+bibliography: referencias.bib
+csl: apa.csl
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE,
+                      fig.width = 8, fig.height = 5)
+library(ggplot2)
+library(dplyr)
+library(tidyr)
+library(scales)
+library(knitr)
+library(kableExtra)
+```
+
+## Introducción
+
+La pandemia de COVID-19 (2020) operó como acelerador de múltiples crisis
+preexistentes, evidenciando las contradicciones estructurales de los sistemas
+sanitarios contemporáneos. Diversos autores señalan que el modelo económico
+desregulado dejó consecuencias severas en los países que lo adoptaron como eje
+único de su política, registrándose las mayores tasas de mortalidad en los
+países del Norte Global [@Cordova2020]. El presente trabajo analiza, en tercera
+persona y con un enfoque cuantitativo y cualitativo, las vulnerabilidades de los
+sistemas de salud y emergencias de la República Argentina entre 2020 y 2025,
+articulando la dimensión global (pandemia, gobernanza internacional y límites
+planetarios) con la dimensión local (estructura sanitaria, paradigmas, industria
+farmacéutica y vulnerabilidades de los servicios de emergencia).
+
+## Dimensión Global
+
+### COVID-19 y sistemas sanitarios
+
+El análisis comparativo de los primeros 36 días de pandemia muestra diferencias
+marcadas en las tasas de recuperación y mortalidad entre países con distintos
+sistemas económico-políticos [@Cordova2020]. La Figura 1 sintetiza
+esta comparación.
+
+```{r fig1, fig.cap='Tasas de recuperación y mortalidad por COVID-19 según sistema económico-político (abril 2020).'}
+df_covid <- data.frame(
+  pais = c('Estados Unidos', 'España', 'Italia', 'Francia', 'Venezuela'),
+  tasa_recuperacion = c(8.0, 39.2, 24.8, 23.3, 50.0),
+  tasa_mortalidad = c(5.0, 10.5, 13.2, 12.6, 4.0),
+  sistema = c('Neoliberal', 'Neoliberal', 'Neoliberal', 'Neoliberal', 'Comunitario')
+)
+df_long <- tidyr::pivot_longer(df_covid,
+                               cols = c('tasa_recuperacion', 'tasa_mortalidad'),
+                               names_to = 'indicador', values_to = 'porcentaje')
+df_long$indicador <- factor(df_long$indicador,
+                            labels = c('Tasa de Mortalidad (%)', 'Tasa de Recuperación (%)'))
+ggplot(df_long, aes(x = reorder(pais, porcentaje), y = porcentaje, fill = indicador)) +
+  geom_col(position = 'dodge', width = 0.7) +
+  scale_fill_manual(values = c('#d62728', '#2ca02c')) +
+  coord_flip() +
+  labs(title = 'Tasas de recuperación y mortalidad COVID-19 (abril 2020)',
+       subtitle = 'Comparación entre sistemas económico-políticos',
+       x = NULL, y = 'Porcentaje (%)', fill = 'Indicador',
+       caption = 'Fuente: Elaboración propia a partir de Córdova & Linares (2020).') +
+  theme_minimal(base_size = 13) +
+  theme(legend.position = 'bottom')
+```
+
+### Gobernanza internacional y retiro de organismos de salud
+
+La policrisis y la entropía caracterizan el sistema internacional contemporáneo,
+donde múltiples crisis convergen de manera simultánea. En este entorno, el
+Derecho Internacional enfrenta el doble desafío del cuestionamiento de los
+compromisos internacionales y el creciente escepticismo hacia el multilateralismo
+[@Bas2025; @Ghiggino2025]. La Tabla 1 sintetiza los retiros recientes
+de Estados miembros de organismos internacionales con impacto en la gobernanza
+sanitaria.
+
+```{r tab1}
+df_retiros <- data.frame(
+  pais = c('Estados Unidos', 'Estados Unidos', 'Bolivia', 'Venezuela', 'Honduras'),
+  organismo = c('OMS', 'UNESCO', 'CIADI', 'CIADI', 'CIADI'),
+  anio = c(2025, 2025, 2007, 2012, 2024),
+  contexto = c('Policrisis — multilateralismo cuestionado',
+               "Política exterior 'America First'",
+               'Soberanía sobre recursos naturales',
+               'Soberanía — modelo bolivariano',
+               'Disputas inversor-Estado'),
+  efecto = c('Argentina inicia análisis de retiro', 'N/A',
+             'Precedente regional', 'Reconfiguración jurídica regional',
+             'En evaluación')
+)
+knitr::kable(df_retiros,
+  col.names = c('País', 'Organismo', 'Año', 'Contexto', 'Efecto Contagio'),
+  caption = 'Retiros de organismos internacionales vinculados a salud (2007–2025).',
+  booktabs = TRUE) |>
+  kableExtra::kable_styling(bootstrap_options = c('striped', 'hover'), full_width = FALSE)
+```
+
+### Límites planetarios y salud
+
+La transgresión de los límites planetarios erosiona las capacidades estatales e
+incrementa la probabilidad de conflictos territoriales, con repercusiones directas
+sobre la salud poblacional; seis de los nueve límites ya habrían sido superados
+[@Rodriguez_sf; @Rockstrom2009]. La Figura 2 ordena los límites según
+su nivel de riesgo sanitario.
+
+```{r fig2, fig.cap='Estado de los límites planetarios y su impacto en los sistemas de salud.'}
+df_limites <- data.frame(
+  limite = c('Cambio climático', 'Deforestación', 'Pérdida biodiversidad',
+             'Contaminación química', 'Agotamiento agua', 'Ciclo nitrógeno',
+             'Acidificación oceánica', 'Aerosoles atmosféricos', 'Ozono estratosférico'),
+  nivel_riesgo = c(9, 8, 9, 7, 8, 7, 5, 5, 3),
+  estado = c('Superado', 'Superado', 'Superado', 'Superado', 'Superado',
+             'Superado', 'En riesgo', 'En riesgo', 'En recuperación')
+)
+df_limites$estado <- factor(df_limites$estado,
+  levels = c('Superado', 'En riesgo', 'En recuperación'))
+ggplot(df_limites, aes(x = reorder(limite, nivel_riesgo), y = nivel_riesgo, color = estado)) +
+  geom_segment(aes(xend = limite, y = 0, yend = nivel_riesgo), linewidth = 1.2) +
+  geom_point(size = 4) +
+  scale_color_manual(values = c('Superado' = '#d62728', 'En riesgo' = '#ff7f0e',
+                                'En recuperación' = '#2ca02c')) +
+  coord_flip() +
+  labs(title = 'Estado de los límites planetarios y riesgo sanitario',
+       subtitle = 'Escala 0–10 según intensidad del impacto en salud humana',
+       x = NULL, y = 'Nivel de riesgo sanitario (0–10)', color = 'Estado',
+       caption = 'Fuente: Elaboración propia a partir de Rodríguez Tornquist & Lacapmesure (s.f.) y Rockström et al. (2009).') +
+  theme_minimal(base_size = 13)
+```
+
+## Dimensión Local: Argentina
+
+### Estructura del sistema sanitario
+
+El sistema de salud argentino se organiza en tres subsectores —público, de obras
+sociales y privado— con coberturas y lógicas de financiamiento heterogéneas, según
+se detalla en la Tabla 2.
+
+```{r tab2}
+df_subsectores <- data.frame(
+  nombre = c('Público', 'Obras Sociales (PAMI + Sindicales)', 'Privado / Prepagas'),
+  cobertura = c(36.0, 46.0, 18.0),
+  financiamiento = c('Estado Nacional y Provincial', 'Aportes laborales', 'Gasto de bolsillo'),
+  caracteristica = c('Gratuito y universal', 'Basado en trabajo formal', 'Mercantilizado')
+)
+knitr::kable(df_subsectores,
+  col.names = c('Subsector', 'Cobertura (%)', 'Financiamiento', 'Característica'),
+  caption = 'Estructura del sistema de salud argentino por subsector (2024).',
+  booktabs = TRUE) |>
+  kableExtra::kable_styling(bootstrap_options = c('striped', 'hover'), full_width = FALSE)
+```
+
+### Paradigmas sanitarios y crisis
+
+Se identifican seis etapas históricas en la evolución de los modelos sanitarios,
+desde el Paleolítico hasta la emergente propuesta de salud integrativa sistémica,
+mostrando cómo cada modelo fue moldeado por movimientos económicos, sociales y
+culturales específicos [@Bongioanni2025]. La Figura 3 representa el
+índice de integración sistémica a lo largo de esas etapas.
+
+```{r fig3, fig.cap='Índice de integración sistémica según etapas históricas del modelo sanitario.'}
+df_etapas <- data.frame(
+  etapa = factor(c('Paleolítico', 'Antigüedad\nClásica', 'Medieval',
+                   'Modernidad\nTemprana', 'Biomedicina\nHegemónica', 'Emergente'),
+                 levels = c('Paleolítico', 'Antigüedad\nClásica', 'Medieval',
+                            'Modernidad\nTemprana', 'Biomedicina\nHegemónica', 'Emergente')),
+  indice = c(9, 7, 4, 3, 2, 8),
+  color_grupo = c('Alto', 'Medio', 'Bajo', 'Bajo', 'Bajo', 'Alto')
+)
+ggplot(df_etapas, aes(x = etapa, y = indice, group = 1)) +
+  geom_line(color = '#1f77b4', linewidth = 1.4) +
+  geom_point(aes(color = color_grupo), size = 5) +
+  scale_color_manual(values = c('Alto' = '#2ca02c', 'Medio' = '#ff7f0e', 'Bajo' = '#d62728')) +
+  scale_y_continuous(limits = c(0, 10), breaks = seq(0, 10, 2)) +
+  labs(title = 'Índice de integración sistémica en los modelos sanitarios históricos',
+       subtitle = 'Escala 0 (reduccionismo total) a 10 (integración plena)',
+       x = 'Etapa histórica', y = 'Índice de integración sistémica', color = 'Nivel',
+       caption = 'Fuente: Elaboración propia a partir de Bongioanni (2025).') +
+  theme_minimal(base_size = 13) +
+  theme(axis.text.x = element_text(size = 10))
+```
+
+La Tabla 3 compara las dimensiones centrales del modelo biomédico
+hegemónico frente al modelo de salud integrativa sistémica.
+
+```{r tab3}
+df_paradigmas <- data.frame(
+  dimension = c('Epistemología', 'Enfoque clínico', 'Gestión del conocimiento',
+                'Organización sanitaria', 'Relación con el ambiente', 'Uso del medicamento'),
+  modelo_biomedico = c('Monocausal', 'Patogénico', 'Jerarquizado', 'Mercantilizada',
+                       'Desvinculado', 'Racional (protocolar)'),
+  modelo_integrativo = c('Pluricausal', 'Salutogénico', 'Intercultural', 'Comunitaria',
+                         'Integrado', 'Consciente (crítico, desprescripción)')
+)
+knitr::kable(df_paradigmas,
+  col.names = c('Dimensión', 'Modelo Biomédico', 'Modelo Integrativo Sistémico'),
+  caption = 'Análisis comparativo entre paradigmas sanitarios (Bongioanni, 2025).',
+  booktabs = TRUE) |>
+  kableExtra::kable_styling(bootstrap_options = c('striped', 'condensed'), full_width = FALSE) |>
+  kableExtra::column_spec(2, color = '#d62728') |>
+  kableExtra::column_spec(3, color = '#2ca02c')
+```
+
+### Industria farmacéutica y farmacontaminación
+
+La industria farmacéutica en Argentina registró un incremento del 74,3 % en su
+facturación durante el último año [@INDEC2025], en paradójica contradicción con el
+deterioro de los indicadores de salud poblacional; este crecimiento no respondería
+a un mayor poder adquisitivo, sino a la proliferación de demandas de intervención
+farmacológica [@Bongioanni2025]. La Figura 4 ilustra esta paradoja.
+
+```{r fig4, fig.cap='Paradoja farmacéutica: crecimiento de la industria vs. deterioro del índice de salud poblacional (2020–2024).'}
+df_farma <- data.frame(
+  anio = 2020:2024,
+  incremento = c(12.0, 18.5, 31.2, 47.8, 74.3),
+  indice_salud = c(62, 60, 58, 56, 54)
+)
+scale_factor <- max(df_farma$incremento) / max(df_farma$indice_salud)
+ggplot(df_farma, aes(x = anio)) +
+  geom_col(aes(y = incremento), fill = '#aec7e8', alpha = 0.8) +
+  geom_line(aes(y = indice_salud * scale_factor), color = '#d62728', linewidth = 1.5) +
+  geom_point(aes(y = indice_salud * scale_factor), color = '#d62728', size = 3) +
+  scale_y_continuous(name = 'Incremento facturación farmacéutica (%)',
+    sec.axis = sec_axis(~ . / scale_factor, name = 'Índice de salud poblacional (0–100)')) +
+  scale_x_continuous(breaks = 2020:2024) +
+  labs(title = 'Paradoja farmacéutica en Argentina (2020–2024)',
+       subtitle = 'Crecimiento industrial vs. deterioro de la salud poblacional',
+       x = 'Año',
+       caption = 'Fuente: Elaboración propia a partir de INDEC (2025) y Bongioanni (2025).') +
+  theme_minimal(base_size = 13)
+```
+
+### Vulnerabilidades del sistema de emergencias
+
+La crisis sistémica contemporánea expone múltiples vulnerabilidades en los servicios
+de emergencia sanitaria, afectados tanto por factores endógenos (recorte
+presupuestario, desigualdad de cobertura) como exógenos (retiro de organismos
+internacionales, farmacontaminación, cambio climático) [@Bongioanni2025; @Bas2025; @Cordova2020].
+La Figura 5 ordena estas vulnerabilidades por nivel de riesgo.
+
+```{r fig5, fig.cap='Nivel de riesgo por tipo de vulnerabilidad en el sistema de salud y emergencias de Argentina.'}
+df_vuln <- data.frame(
+  tipo = c('Financiera', 'Gobernanza\nInternacional', 'Ambiental',
+           'Pandémica/\nEpidemiológica', 'Paradigmática', 'Climática'),
+  riesgo = c(8, 7, 8, 9, 6, 8),
+  categoria = c('Endógena', 'Exógena', 'Exógena', 'Exógena', 'Endógena', 'Exógena')
+)
+ggplot(df_vuln, aes(x = reorder(tipo, riesgo), y = riesgo, fill = categoria)) +
+  geom_col(width = 0.65) +
+  geom_text(aes(label = riesgo), hjust = -0.3, size = 4.5) +
+  scale_fill_manual(values = c('Endógena' = '#1f77b4', 'Exógena' = '#ff7f0e')) +
+  coord_flip(ylim = c(0, 11)) +
+  labs(title = 'Vulnerabilidades del sistema sanitario argentino',
+       subtitle = 'Nivel de riesgo 0–10 según tipo de vulnerabilidad',
+       x = NULL, y = 'Nivel de riesgo (0–10)', fill = 'Origen',
+       caption = 'Fuente: Elaboración propia a partir de Bongioanni (2025); Bas Vilizzio (2025); Córdova & Linares (2020).') +
+  theme_minimal(base_size = 13)
+```
+
+## Conclusiones y Recomendaciones
+
+El análisis integrado revela que las vulnerabilidades de los sistemas de salud y
+emergencias argentinos no son atribuibles a un único factor, sino a la convergencia
+de presiones globales (policrisis, retiro del multilateralismo, transgresión de
+límites planetarios) y locales (fragmentación del sistema, hegemonía del modelo
+biomédico y farmacontaminación). Como horizonte de respuesta se propone la
+transición del paradigma biomédico hegemónico hacia un **Modelo de Salud Integrativa
+Sistémica** que articule perspectivas decoloniales, sostenibilidad ambiental y
+enfoques participativos [@Bongioanni2025]. Esa transición puede ordenarse en tres
+fases: (1) **diagnóstico crítico** —mapeo de farmacontaminación, auditoría de
+cobertura territorial e identificación de determinantes estructurales—;
+(2) **transición paradigmática** —incorporación de medicina integrativa en el sistema
+público, reconocimiento de saberes ancestrales y uso consciente del medicamento—; y
+(3) **institucionalización** —reformulación de políticas públicas, reanudación de
+compromisos internacionales y desarrollo de sistemas sanitarios ambientalmente
+sustentables.
+
+A efectos de monitoreo, se sugieren los siguientes indicadores de sostenibilidad:
+
+- Huella de carbono por cama hospitalaria bajo esquemas de cogeneración renovable.
+- Análisis de ciclo de vida (LCA) comparativo entre el modelo biomédico hegemónico y el modelo de salud integrativa sistémica ante escenarios de policrisis.
+- Resiliencia de la cadena de suministro farmacéutico frente al retiro de organismos internacionales de salud.
+- Índice de farmacontaminación en cuencas hídricas urbanas y rurales de Argentina.
+- Cobertura efectiva de sistemas de alerta temprana ante emergencias sanitarias de origen zoonótico y climático.
+
+## Referencias
+
+<style>
+.d-article .citation-list {
+  display: block !important;
+}
+.d-article .citation {
+  padding-left: 2em !important;
+  text-indent: -2em !important;
+  margin-bottom: 1em !important;
+}
+</style>
